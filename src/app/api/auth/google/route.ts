@@ -6,6 +6,7 @@ import { getOAuthClient } from "@/lib/googleCalendarClient";
  * 구글 로그인 → 동의 화면에서 캘린더 접근을 승인하면
  * /api/auth/google/callback 으로 리다이렉트되어 리프레시 토큰을 발급받는다.
  */
+export const dynamic = "force-dynamic";
 export async function GET() {
   const oauth2Client = getOAuthClient();
   const url = oauth2Client.generateAuthUrl({
