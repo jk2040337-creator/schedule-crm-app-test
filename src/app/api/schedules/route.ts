@@ -4,6 +4,7 @@ import { getCustomer, listCustomers } from "@/lib/customers";
 import { createCalendarEvent } from "@/lib/googleCalendarClient";
 import type { ScheduleWithCustomer } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const [schedules, customers] = await Promise.all([
